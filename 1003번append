@@ -1,0 +1,46 @@
+"""
+결국 이문제는 0이랑 1갯수만 파악하면됌.
+그래서 초기 리스트를 만들고 append를 이용해서 1의 마지막을 0에 넣고 0의 -2와 -1번째를 더해 1에 마지막에 넣는식으로
+이러면 재귀식으로
+# def fibonacci(n):
+#     if n <= 1:
+#         return n
+#     dp = [0] * (n + 1)
+#     dp[0] = 0
+#     dp[1] = 1
+#     for i in range(2, n + 1):
+#         dp[i] = dp[i - 1] + dp[i - 2]
+#     return dp[n]
+
+
+# list_n = []
+# x = int(input())
+
+# for i in range(x):
+#     n = int(input())
+#     list_n.append(n)
+
+# for i in range(len(list_n)):
+#     fibonacci(list_n[i])
+#     print(dp[i - 1], dp[i - 2])
+#     zero_c = 0
+#     one_c = 0
+이렇게 구현 안하고 빠르게 파악 가능함.
+"""
+
+list_n = []
+t = int(input())
+
+for i in range(t):
+    n = int(input())
+    list_n.append(n)
+
+for n in list_n:
+    cnt_0 = [1, 0]
+    cnt_1 = [0, 1]
+    if n > 1:
+        for i in range(n - 1):
+            cnt_0.append(cnt_1[-1])
+            cnt_1.append(cnt_0[-2] + cnt_1[-1])
+
+    print(cnt_0[n], cnt_1[n])
