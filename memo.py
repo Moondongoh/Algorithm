@@ -104,12 +104,12 @@
 #             count = 0
 #     print(sum)
 # ==========================================2675
-x = int(input())
+# x = int(input())
 
-outs = []
-for _ in range(x):
-    a, s = input().split()
-    a = int(a)
-    outs.append("".join(ch * a for ch in s))
+# outs = []
+# for _ in range(x):
+#     a, s = input().split()
+#     a = int(a)
+#     outs.append("".join(ch * a for ch in s))
 
-print("\n".join(outs))
+# print("\n".join(outs))
