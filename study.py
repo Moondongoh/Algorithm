@@ -48,40 +48,40 @@
 #     print("napari 3D 뷰어 실행 실패:", e)
 
 
-import nibabel as nib
+# import nibabel as nib
 
-epi_img = nib.load(r"E:\3D\Task09_Spleen\imagesTr\spleen_2.nii.gz")
-epi_img_data = epi_img.get_fdata()
+# epi_img = nib.load(r"E:\3D\Task09_Spleen\imagesTr\spleen_2.nii.gz")
+# epi_img_data = epi_img.get_fdata()
 
-slice0 = epi_img_data[26, :, :]
-slice1 = epi_img_data[:, 30, :]
-slice2 = epi_img_data[:, :, 16]
+# slice0 = epi_img_data[26, :, :]
+# slice1 = epi_img_data[:, 30, :]
+# slice2 = epi_img_data[:, :, 16]
 
-import nibabel as nib
-import matplotlib.pyplot as plt
+# import nibabel as nib
+# import matplotlib.pyplot as plt
 
-epi_img = nib.load(r"E:\3D\Task09_Spleen\imagesTr\spleen_2.nii.gz")
-epi_img_data = epi_img.get_fdata()
+# epi_img = nib.load(r"E:\3D\Task09_Spleen\imagesTr\spleen_2.nii.gz")
+# epi_img_data = epi_img.get_fdata()
 
-# slice0 = epi_img_data[100, :, :]
-# slice1 = epi_img_data[:, 100, :]
-slice0 = epi_img_data[:, :, 1]
-slice1 = epi_img_data[:, :, 20]
-slice2 = epi_img_data[:, :, 40]
+# # slice0 = epi_img_data[100, :, :]
+# # slice1 = epi_img_data[:, 100, :]
+# slice0 = epi_img_data[:, :, 1]
+# slice1 = epi_img_data[:, :, 20]
+# slice2 = epi_img_data[:, :, 40]
 
-plt.imshow(slice2, cmap="gray")
-plt.title("Axial View")
-plt.show()
+# plt.imshow(slice2, cmap="gray")
+# plt.title("Axial View")
+# plt.show()
 
-fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+# fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
-axes[0].imshow(slice0, cmap="gray")
-axes[0].set_title("Axial 1 View")
+# axes[0].imshow(slice0, cmap="gray")
+# axes[0].set_title("Axial 1 View")
 
-axes[1].imshow(slice1, cmap="gray")
-axes[1].set_title("Axial 20 View")
+# axes[1].imshow(slice1, cmap="gray")
+# axes[1].set_title("Axial 20 View")
 
-axes[2].imshow(slice2, cmap="gray")
-axes[2].set_title("Axial 40 View")
+# axes[2].imshow(slice2, cmap="gray")
+# axes[2].set_title("Axial 40 View")
 
-plt.show()
+# plt.show()
